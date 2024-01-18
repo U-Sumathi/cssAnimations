@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --HEADER-BGCOLOR:grey;
+    --HEADER-COLOR: white;
+}
+html{
+    font-size: 1.5rem;
+    font-family: 'nunito', sans-serif;
+}
+body{
+    min-height:100vh;
+    display: flex;
+    flex-flow: column nowrap;
+}
+header{
+    background-color: var(--HEADER-BGCOLOR);
+    color: var(--HEADER-COLOR);
+    
+    
+}
+/* sumathi and..... dot to vertical mari.... vertical line button making*/
+.header-title-line{
+    padding: 0.25rem 0.5rem;
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content: space-between;              
+}
+/* squarebox  button varuthu*/
+.menu-button{
+    background-color: transparent;
+    width: 48px;
+    height: 48px;
+    border: 2px solid  red; 
+    /*button ah flex mathurum*/
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+    
+}
+/*squarebox kula line vara*/
+.menu-icon,
+.menu-icon::before,
+.menu-icon::after{
+    background-color: var(--HEADER-COLOR);
+    width:40px;
+    height:5px;
+    border-radius: 5px;
+    /*line ah button kula vekaran*/
+    position: absolute;
+    transition: all 0.5s;
+
+
+}
+/*before,after line make it work*/
+.menu-icon::before,
+.menu-icon::after{
+    content: "";
+}
+
+ 
+
+.menu-icon::before{
+    transform: translate(-20px,-12px);
+}
+.menu-icon::after{
+    transform: translate(-20px,12px);
+}
+/*navigation part*/
+nav ul{
+    list-style-type: none;
+    display: flex; /*just suma*/
+    flex-flow: column nowrap;
+
+
+}
+nav li{
+    border-top: 1px solid var(--HEADER-COLOR);
+    padding: 0.5rem;
+}
+nav a{
+    display: block;     /*must for text center,full width ah block ah eduthukum,athuku center ah text wl place*/
+    text-align: center;
+     width: 80%;   /*80%width take ,80% width ku center la irukum*/
+    margin:auto;  /*ipa normal ah center varum 1oo%ku, so no use these 2 lines*/
+
+/* }
+nav a:any-link{ */
+    color: var(--HEADER-COLOR);
+    font-weight: bold;
+    text-decoration: none;
+}
+nav a:hover,
+nav a:focus{
+    transform: scale(1.2);
+    transition: all 0.3s;
+}
+
